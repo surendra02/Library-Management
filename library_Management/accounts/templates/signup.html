@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="mask d-flex align-items-center h-100 gradient-custom-3 col-sm-4"
+     style="margin-left:450px;margin-top:60px;border-radius:15px">
+    <center><h1><b>Create Student Account</h1></center>
+    <hr>
+
+    {% if messages %}
+    <div class="alert alert-danger" role="alert" style="padding:5px">
+        {% for i in messages %}
+        <div class="alert-link">{{i}}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        <label class="form-label">Student Name</label>
+        <input class="form-control" type="text" placeholder="Student Name" name="sname">
+
+        <label class="form-label" style="margin-top:5px">Email Address</label>
+        <input class="form-control" type="email" placeholder="Email Address" name="email">
+
+        <label class="form-label" style="margin-top:5px">Mobile</label>
+        <input class="form-control" type="text" placeholder="Mobile number" name="mobile">
+
+        <label class="form-label" style="margin-top:5px">Password</label>
+        <input class="form-control" type="password" placeholder="Password" name="password1">
+
+        <label class="form-label" style="margin-top:5px">Confirm Password</label>
+        <input class="form-control" type="password" placeholder="Confirm Password" name="password2">
+
+        <input type="submit" value="Signup" class="btn btn-primary btn-lg btn-block"
+               style="margin-bottom:10px;margin-top:10px;padding:5px">
+    </form>
+    <center> if already have account? <a href="/login">Login</a>
+</div>
+{% endblock %}

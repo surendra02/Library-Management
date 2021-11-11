@@ -1,0 +1,14 @@
+1: Project Name - library_Management
+2: In this project have two apps  1. accounts  2. library
+3: accounts app  manage students accounts such as signup and login
+4: library app resposible to show all books in front of user.
+5: If you are not signup you can not login and if you are not login you can not enter in the library page.
+6: studets can not perform any oprations like create,update,insert only can view.
+7: Admin can perform all operations like insert book, update book, delete book, view book from admin side.
+8: Admin can signup with email and password using "python manage.py createsuperuser".
+8: In the url :- type :-   http://127.0.0.1:8000/admin/ go to admin login page and login.
+
+
+Usin Mysql database.
+
+Internet connection is must to better user interface.

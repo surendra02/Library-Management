@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="row bg-primary" style="height:50px;text-align:enter;margin-bottom:0px">
+    <span>
+        <b style="margin-left:1100px;margin-top:0px;">{{request.user}}</b>
+           <a style="margin-top:10px;margin-left:20px" href="/logout" class="btn btn-danger">Logout</a>
+    </span>
+    <span>
+         <center><h1 style="margin-top:-40px">Welocme To Library</h1></center>
+    </span>
+</div>
+
+<div class="container">
+    <div class="row bg-primay" style="margin:0px">
+        {% for i in book_data %}
+        <div class="col- col-sm-3 bg-dager" style="margin-top:5px">
+
+            <div class="card" style="width:25rem;background:white;text-align:center;height:auto;color:black">
+                <img src="/media/{{i.b_image}}" class="card-img-top" alt="..." height="200px" style="margin-top:10px">
+                <div class="card-body">
+                    <h5 class="card-title" style="color:green"><b>{{i.b_name}}</h5>
+                    <p class="card-tet">{{i.b_title}} by- {{i.b_author}}</p>
+                    <a href="#" style="margin-bottom:5px" class="btn btn-success">Read</a>
+
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}

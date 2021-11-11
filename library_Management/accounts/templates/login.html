@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="mask d-flex align-items-center h-100 gradient-custom-3 col-sm-4"
+     style="margin-left:450px;margin-top:60px;border-radius:10px;border:2px">
+    <center><h1><b>Student Login</h1></center><hr>
+    {% if messages %}
+    <div class="alert alert-danger" role="alert" style="padding:5px">
+        {% for i in messages %}
+        <div class="alert-link">{{i}}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        <label class="form-label">Email Address</label>
+        <input class="form-control" type="email" placeholder="Email Address" name="email">
+        <label class="form-label" style="margin-top:5px">Password</label>
+        <input class="form-control" type="password" placeholder="Password" name="password">
+        <input type="submit" value="Login" class="btn btn-primary btn-lg btn-block"
+               style="margin-bottom:10px;margin-top:10px;padding:5px">
+    </form>
+
+    <center> if create new account? <a href="/">Signup</a>
+
+
+</div>
+
+{% endblock %}
